@@ -1,1 +1,8 @@
-BENCHMARK_CASE={"goals":[],"sessions":[],"progress":{},"environment":{},"flags":[],"human_approved":False}
+BENCHMARK_CASE = {
+    "goals": [],
+    "sessions": [],
+    "progress": {},
+    "environment": {},
+    "flags": [],
+    "human_approved": False,
+}
