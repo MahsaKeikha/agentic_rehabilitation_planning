@@ -1,1 +1,5 @@
-SYSTEM_PROMPTS={"scope":"Support rehabilitation workflow planning only.","evidence":"Do not invent patient progress or clinical facts.","authority":"Qualified therapist and clinician review remain required."}
+SYSTEM_PROMPTS = {
+    "scope": "Support rehabilitation workflow planning only.",
+    "evidence": "Do not invent patient progress or clinical facts.",
+    "authority": "Qualified therapist and clinician review remain required.",
+}
