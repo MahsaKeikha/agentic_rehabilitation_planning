@@ -1,3 +1,13 @@
+from __future__ import annotations
+
+from typing import Any
+
+
 class TraceLog:
-    def __init__(self):self.events=[]
-    def record(self,s,d):self.events.append({"stage":s,"detail":d})
+    """Collect lightweight workflow trace events."""
+
+    def __init__(self) -> None:
+        self.events: list[dict[str, Any]] = []
+
+    def record(self, stage: str, detail: Any) -> None:
+        self.events.append({"stage": stage, "detail": detail})
