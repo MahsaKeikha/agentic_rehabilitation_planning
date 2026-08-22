@@ -1,6 +1,14 @@
 # Agentic Rehabilitation Planning
 
-F60 standalone multi-agent rehabilitation planning support system.
+**F60 | L3 Gold Standard | v1.0**
+
+A standalone multi-agent rehabilitation planning support system with fail-closed governance, qualified-human approval gates, explicit clinical-scope boundaries, held-out evaluation, observability, and CI across Python 3.10, 3.11, and 3.12.
+
+## Safety and authority boundary
+
+F60 supports rehabilitation workflow organization, documentation, progress tracking, equipment and environment review, and escalation. It does not diagnose, prescribe treatment, autonomously progress therapy, grant clinical clearance, replace qualified rehabilitation or medical professionals, or replace emergency processes.
+
+Patient-specific use fails closed unless all required governance gates are satisfied and a qualified human explicitly approves the plan.
 
 ## Agents
 
@@ -27,6 +35,29 @@ F60 standalone multi-agent rehabilitation planning support system.
 - [`equipment_environment_review.py`](SKILLS/equipment_environment_review.py)
 - [`escalation_review.py`](SKILLS/escalation_review.py)
 
-Supporting layers include orchestration, memory, state, schemas, prompts, config, safety, observability, evals, benchmarks, examples, tests, docs, and CI.
+## Gold Standard architecture
 
-This system supports rehabilitation workflow planning only. It does not prescribe treatment, replace therapist judgment, or replace emergency processes.
+Supporting layers include orchestration, memory, state, schemas, prompts, config, safety, observability, evals, benchmarks, examples, tests, documentation, and CI.
+
+The governance layer requires patient identity verification, clinician-confirmed goals, contraindication review, fall-risk safeguards, current mobility status, assistive-device safety review, pain and symptom review, therapy-scope confirmation, progression limits, environment safety review, complete documentation, privacy controls, an escalation path, and explicit qualified-human approval.
+
+## Verification gates
+
+CI runs the following gates on Python 3.10, 3.11, and 3.12:
+
+```bash
+ruff check .
+python -m pytest -q
+python evals/heldout_suite.py
+python examples/example_run.py
+python run.py
+```
+
+The gold-standard test suite verifies fail-closed governance, every required gate, acute red-flag escalation, prohibition of autonomous progression and new treatment prescription, mandatory human approval, specialist coverage, approval-contract consistency, patient-specific fail-closed behavior, and absence of autonomous treatment authority.
+
+## Repository identity
+
+- Library ID: **F60**
+- Repository: **agentic_rehabilitation_planning**
+- Standard: **L3 Gold Standard**
+- Version: **1.0**
