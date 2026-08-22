@@ -1,3 +1,13 @@
+from __future__ import annotations
+
+from typing import Any
+
+
 class MemoryStore:
-    def __init__(self):self.items=[]
-    def add(self,x:dict):self.items.append(x)
+    """Minimal in-memory store for workflow artifacts."""
+
+    def __init__(self) -> None:
+        self.items: list[dict[str, Any]] = []
+
+    def add(self, item: dict[str, Any]) -> None:
+        self.items.append(dict(item))
